@@ -1,0 +1,155 @@
+@import "imagenes";
+@import "mediaqueries";
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+#mainBody{
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+}
+.header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #00000059;
+	font-size: 16px;
+	height: 8vh;
+	width: 100%;
+}
+.header__nav li{
+	display: inline-block;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 0.2em;
+	a{
+		color: #f8f9fa;
+		text-decoration: none;
+	}
+}
+.titulos{
+	display: flex;
+	flex-direction: column;
+	background-color: #00000059; 
+	margin: 10vh;
+}
+.mainTitulo{
+	font-family: 'Playfair Display', serif;
+	font-size: 80px;
+	padding-left: 3vh;
+	color: #f8f9fa;
+}
+.subtitulo{
+	font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-size: 50px;
+	color: #f8f9fa;
+	margin-left: 1.5em;
+}
+#bodyVel{
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	color: black;
+	
+}
+.contVel{
+	border-radius: 0.5rem;
+	text-align: center;
+	grid-template-areas:
+		"contVel__intro"
+		"contVel__info"
+		"footer";
+		margin-left:2em;
+		margin-right:2em;
+		section{
+			margin-top:1em;
+			margin-right:1em;
+			padding:1em;
+			background-color:#9e9e9e99;
+		}
+		h1{
+			padding:1rem;
+		}
+		h2{
+			margin-top:0.5em;
+		}
+		h3{
+			padding:1em;
+		}
+}
+	.secImg{
+		margin-top:0.5em;
+}
+#boton{
+	display: flex;
+	margin-top: 5vh;
+	margin-left: 5vh;
+	margin-right: 5vh;
+	margin-bottom: 25vh;
+	justify-content: center;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #fdb30d7a;
+    border-color: #ffeb3b;
+}
+.card-footer{
+	margin: 5vh;
+	font-family: 'Montserrat', sans-serif;
+	color: #f8f9fa;
+	background-color: #00000059; 
+}
+#bodyTar{
+	@extend #bodyVel;
+	section{
+			display:flex;
+			flex-direction:column;
+		}
+}
+.contTar{
+	display: flex;
+	border-radius: 1rem;
+	padding: 2em;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content:space-around;
+	align-items:center;
+		h1{
+			text-align:center;
+			padding:0.5rem;
+		}
+		h3{
+			text-align:center;
+	}
+		p{
+			text-align:justify;
+	}
+
+}
+.textTar{
+	display:flex;
+	flex-direction:column;
+	padding:1rem;
+	align-items:center;
+	p{
+	padding:0.5rem;
+	}
+}
+.imgTar{
+	display:flex;
+	flex-direction:column;
+	align-content:center;
+	margin:1em;
+	padding:1em;
+}

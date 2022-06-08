@@ -1,0 +1,227 @@
+#mainBody {
+  background-image: url(../imagenes/arcana_home.JPG);
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    height: 12vh;
+    width: 100%;
+  }
+  .header__nav li {
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+  }
+  .contVel {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+  .contVel section {
+    padding: 2em;
+  }
+  .contVel h3 {
+    padding: 1em;
+  }
+  .contVel h1 {
+    padding: 1rem;
+    font-size: 100px;
+  }
+  .contVel__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+  }
+  .contTar {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-arround;
+    align-items: center;
+  }
+  .textTar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#mainBody {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #00000059;
+  font-size: 16px;
+  height: 8vh;
+  width: 100%;
+}
+
+.header__nav li {
+  display: inline-block;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 0.2em;
+}
+
+.header__nav li a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.titulos {
+  display: flex;
+  flex-direction: column;
+  background-color: #00000059;
+  margin: 10vh;
+}
+
+.mainTitulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  padding-left: 3vh;
+  color: #f8f9fa;
+}
+
+.subtitulo {
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: #f8f9fa;
+  margin-left: 1.5em;
+}
+
+#bodyVel, #bodyTar {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.contVel {
+  border-radius: 0.5rem;
+  text-align: center;
+  grid-template-areas: "contVel__intro" "contVel__info" "footer";
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.contVel section {
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 1em;
+  background-color: #9e9e9e99;
+}
+
+.contVel h1 {
+  padding: 1rem;
+}
+
+.contVel h2 {
+  margin-top: 0.5em;
+}
+
+.contVel h3 {
+  padding: 1em;
+}
+
+.secImg {
+  margin-top: 0.5em;
+}
+
+#boton {
+  display: flex;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  margin-bottom: 25vh;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #fdb30d7a;
+  border-color: #ffeb3b;
+}
+
+.card-footer {
+  margin: 5vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f9fa;
+  background-color: #00000059;
+}
+
+#bodyTar section {
+  display: flex;
+  flex-direction: column;
+}
+
+.contTar {
+  display: flex;
+  border-radius: 1rem;
+  padding: 2em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contTar h1 {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.contTar h3 {
+  text-align: center;
+}
+
+.contTar p {
+  text-align: justify;
+}
+
+.textTar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+.textTar p {
+  padding: 0.5rem;
+}
+
+.imgTar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 1em;
+  padding: 1em;
+}

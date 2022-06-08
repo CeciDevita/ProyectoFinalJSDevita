@@ -1,0 +1,53 @@
+@media all and (min-width: 768px){
+	.header{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 30px;
+		height: 12vh;
+		width: 100%;
+	}
+	.header__nav li{
+		display: inline-block;
+		margin-top: 1em;
+		margin-left: 2em;
+		margin-right: 2em;
+		margin-bottom: 0.5em;
+	}
+	.contVel{
+		margin-left:4em;
+		margin-right:4em;
+		section{
+		padding:2em;
+		}
+		h3{
+		padding:1em;
+		}
+		h1{
+		padding:1rem;
+		font-size:100px;
+		}
+	}
+	.contVel__info{
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-around;
+		justify-content: center;
+		align-items: center;
+	}
+	.contTar{
+		flex-direction:column;
+		flex-wrap:nowrap;
+		align-content:center;
+		justify-content:space-arround;
+		align-items:center;
+	}
+	.textTar{
+		flex-direction:row;
+		flex-wrap:nowrap;
+		align-items:center;
+		margin-left:3rem;
+		margin-right:3rem;
+	}
+}
+
