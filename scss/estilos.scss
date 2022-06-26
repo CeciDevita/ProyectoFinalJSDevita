@@ -1,3 +1,4 @@
+@import "fuentes";
 @import "imagenes";
 @import "mediaqueries";
 *{
@@ -52,18 +53,81 @@
 	color: #f8f9fa;
 	margin-left: 1.5em;
 }
-#bodyVel{
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+.footer{
+	display: flex;
+	align-items: center;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+	margin: 1em;
+	bottom:0;
 	font-family: 'Montserrat', sans-serif;
+		p{
+		color: black;
+		font-size:16 px;
+	}
+}
+#bodyAb{
+	@extend #mainBody;
+	background-size: auto;
+	background-repeat: repeat;
+}
+.about{
+	display:flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    margin: 2em;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    background-color: #9e9e9e99;
+	text-align: center;
+		h1{
+			margin-top: 1em;
+			margin-left: 1em;
+			margin-right: 1em;
+			margin-bottom: 0.5em;
+			}
+		p{
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-bottom: 0.5em;
+	}
+}
+#bodyForm{
+	@extend #bodyAb;
+}
+#formTitle{
+	justify-content: center;
+	margin: 5vh;
+	background-color:#9e9e9e99;
+	color: #f8f9fa;
+		h1{
+		font-family: 'Playfair Display', sans-serif;
+	}
+}
+#formulario{
+	margin: 5vh;
+	background-color: #9e9e9e99;
+		form{
+		flex-direction: column;
+	}
+	button{
+	color: black;
+    background-color: #fdb30d7a;
+    border-color: #ffeb3b;
+	}
+} 
+#bodyVel{
+	@extend #mainBody;
 	font-size: 1rem;
 	color: black;
-	
 }
 .contVel{
-	border-radius: 0.5rem;
+	background-color: #c78f55a8;
+	border-radius: 1rem;
 	text-align: center;
 	grid-template-areas:
 		"contVel__intro"
@@ -73,6 +137,7 @@
 		margin-right:2em;
 		section{
 			margin-top:1em;
+			margin-left: 1em;
 			margin-right:1em;
 			padding:1em;
 			background-color:#9e9e9e99;
@@ -87,38 +152,33 @@
 			padding:1em;
 		}
 }
-	.secImg{
-		margin-top:0.5em;
+.secImg{
+	margin-top:0.5em;
+
 }
 #boton{
 	display: flex;
 	margin-top: 5vh;
 	margin-left: 5vh;
 	margin-right: 5vh;
-	margin-bottom: 25vh;
+	margin-bottom: 2vh;
 	justify-content: center;
 }
 .btn-primary {
-    color: #fff;
+    color: black;
     background-color: #fdb30d7a;
     border-color: #ffeb3b;
 }
-.card-footer{
-	margin: 5vh;
-	font-family: 'Montserrat', sans-serif;
-	color: #f8f9fa;
-	background-color: #00000059; 
-}
 #bodyTar{
-	@extend #bodyVel;
+	@extend #mainBody;
 	section{
 			display:flex;
 			flex-direction:column;
 		}
 }
 .contTar{
+	@extend .contVel;
 	display: flex;
-	border-radius: 1rem;
 	padding: 2em;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -128,22 +188,21 @@
 		h1{
 			text-align:center;
 			padding:0.5rem;
-		}
+	}
 		h3{
 			text-align:center;
 	}
 		p{
 			text-align:justify;
 	}
-
 }
 .textTar{
 	display:flex;
 	flex-direction:column;
 	padding:1rem;
 	align-items:center;
-	p{
-	padding:0.5rem;
+		p{
+		padding:0.5rem;
 	}
 }
 .imgTar{
