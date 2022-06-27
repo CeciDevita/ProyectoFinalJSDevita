@@ -100,6 +100,7 @@
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background-color: #00000059;
@@ -111,9 +112,13 @@
 .header__nav li {
   display: inline-block;
   margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
   margin-bottom: 0.2em;
+}
+
+.header__nav li ul {
+  padding-left: 0 !important;
 }
 
 .header__nav li a {
@@ -125,12 +130,12 @@
   display: flex;
   flex-direction: column;
   background-color: #00000059;
-  margin: 10vh;
+  margin: 6vh;
 }
 
 .mainTitulo {
   font-family: 'Playfair Display', serif;
-  font-size: 80px;
+  font-size: 70px;
   padding-left: 3vh;
   color: #f8f9fa;
 }
@@ -138,7 +143,7 @@
 .subtitulo {
   font-style: italic;
   font-family: 'Playfair Display', serif;
-  font-size: 50px;
+  font-size: 40px;
   color: #f8f9fa;
   margin-left: 1.5em;
 }
