@@ -1,21 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;1,600&display=swap");
 #mainBody, #bodyAb, #bodyForm, #bodyVel, #bodyTar {
-  background-image: url(../imagenes/arcana_home.JPG);
+  background-image: url(../Imagenes/arcana_home.JPG);
 }
 
 #bodyAb, #bodyForm {
-  background-image: url(../imagenes/aboutBackground.jpg);
+  background-image: url(../Imagenes/aboutBackground.jpg);
 }
 
 #bodyForm {
-  background-image: url(../imagenes/formbackground.jpg);
+  background-image: url(../Imagenes/formbackground.jpg);
 }
 
 #bodyVel {
-  background-image: url(../imagenes/velomanciaBackground.jpg);
+  background-image: url(../Imagenes/velomanciaBackground.jpg);
 }
 
 #bodyTar {
-  background-image: url(../imagenes/tarotBackground.jpg);
+  background-image: url(../Imagenes/tarotBackground.jpg);
 }
 
 @media all and (min-width: 768px) {
