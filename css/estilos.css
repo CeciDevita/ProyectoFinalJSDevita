@@ -215,6 +215,12 @@
 #formulario form {
   flex-direction: column;
 }
+.error-mostrar {
+	border: 5px solid rgb(170, 0, 0);
+}
+.correcto {
+	border: 5px solid yellow;
+} 
 
 #formulario button {
   color: black;
@@ -231,7 +237,9 @@
   background-color: #c78f55a8;
   border-radius: 1rem;
   text-align: center;
-  grid-template-areas: "contVel__intro" "contVel__info" "footer";
+  grid-template-areas: "contVel__intro"
+ "contVel__info"
+ "footer";
   margin-left: 2em;
   margin-right: 2em;
 }
