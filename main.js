@@ -1,13 +1,10 @@
 //variables
-
+const formulario = document.querySelector("#formulario");
 const nombre = document.querySelector("#nombre");
 const email = document.querySelector("#email");
 const asunto = document.querySelector("#asunto");
 const msj = document.querySelector("#msj");
-
-//boton
-
-const btnEnviar = document.querySelector("#boton");
+const btnEnviar = document.querySelector("#btnEnviar");
 
 escuchadorEventos();
 
@@ -20,6 +17,10 @@ function escuchadorEventos(){
  email.addEventListener("blur",validarInformacion);
  asunto.addEventListener("blur",validarInformacion);
  msj.addEventListener("blur",validarInformacion);
+
+ //boton enviar
+
+ formulario.addEventListener("submit", enviarFormulario);
 }
 
 //Carga de información 
@@ -43,5 +44,25 @@ function validarInformacion(elemento){
 
 
 }
+
+//Envio de formulario
+function enviarFormulario(elemento){
+    elemento.preventDefault()
+ Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Info enviada! Te respondemos por mail <3',
+    showConfirmButton: false,
+    timer: 1500
+  })
+}
+
+
+
+
+
+
+
+
 
 
