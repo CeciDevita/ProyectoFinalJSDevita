@@ -1,32 +1,60 @@
-//variables
-const formulario = document.querySelector("#formulario");
-const nombre = document.querySelector("#nombre");
-const email = document.querySelector("#email");
-const asunto = document.querySelector("#asunto");
-const msj = document.querySelector("#msj");
-const btnEnviar = document.querySelector("#btnEnviar");
+const formulario = document.getElementById("formulario");
 
 escuchadorEventos();
 
 //escuchador de eventos
+function cargaFinalizada (){
 
+}
 function escuchadorEventos(){
  document.addEventListener("DOMContentLoaded", cargaFinalizada);
-
  nombre.addEventListener("blur",validarInformacion);
  email.addEventListener("blur",validarInformacion);
  asunto.addEventListener("blur",validarInformacion);
- msj.addEventListener("blur",validarInformacion);
+ mensaje.addEventListener("blur",validarInformacion);
 
  //boton enviar
 
  formulario.addEventListener("submit", enviarFormulario);
 }
 
-//Carga de información 
-
-function cargaFinalizada(){
+//Guardado y Obtención de Datos
+function convertFormularioDataToTransactionObj (formularioData){
+    let transactionNombre = formularioData.get("nombre");
+    let transactionEmail = formularioData.get("email");
+    let transactionAsunto = formularioData.get("asunto");
+    let transactionMensaje = formularioData.get("mensaje");
+    return{
+        "nombre": transactionNombre,
+        "email": transactionEmail,
+        "asunto": transactionAsunto,
+        "mensaje": transactionMensaje
+    }
 }
+//localStorage
+function saveTransactionObj (transactionObj){
+    let transactionObjJSON = JSON.stringify(transactionObj);
+    localStorage.setItem("transactionData", transactionObjJSON);
+}
+
+    formulario.addEventListener("submit", function(event){
+    event.preventDefault();
+    let formularioData = new FormData(formulario);
+    let transactionObj = convertFormularioDataToTransactionObj (formularioData);
+    saveTransactionObj (transactionObj);
+})
+    document.addEventListener("DOMcontentLoaded", function(event){
+        let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
+        transactionObjArray.forEach(
+            function (arrayElement){
+                console.log(arrayElement);
+            }
+        )
+    }
+    )
+    //fin localStorage
+//Fin Guardado y Obtención de Datos
+
 function mostrarError(){
     alert("Los campos están incompletos!")
 
@@ -42,10 +70,9 @@ function validarInformacion(elemento){
         mostrarError();
     }
 
-
 }
 
-//Envio de formulario
+//Mostrar formulario enviado
 function enviarFormulario(elemento){
     elemento.preventDefault()
  Swal.fire({
