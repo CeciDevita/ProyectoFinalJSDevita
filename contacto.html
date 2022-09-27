@@ -11,7 +11,7 @@
   	<div id="formTitle" class="row row-cols-lg-auto g-3 align-items-center">
   		<h1>Consultas y Valores</h1>
   	</div>
-  	<div>
+  	<div id="divForm">
 		<form id="formulario" name="formulario" class="row row-cols-lg-auto g-3 align-items-center justify-content-center" action="contacto.html" method="POST" enctype="multipart/form-data">
 		  	<div>
 		    	<input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
@@ -23,15 +23,13 @@
 				<input id="asunto" name="asunto" type="text" class="form-control" placeholder="Asunto">
 		  	</div>
 		  	<div id="inputCuatro">
-		    	<textarea id="mensaje" name="mensaje">Mensaje</textarea>
+		    	<textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
 		  	</div>
 		  	<div id="btn">
 		   		<button id="btnEnviar" name="btnEnviar" type="submit" class="btn btn-primary">Enviar</button>
 		  	</div>
 		</form>
-		<div id="btnHome">
-			<a href="index.html" class="btn btn-primary">Home</a>
-		</div>
+	</div>
 		
 		<footer class="footer">
 	    	<p>Cecilia Devita 2022</p>

@@ -32,17 +32,31 @@ function convertFormularioDataToTransactionObj (formularioData){
     }
 }
 //localStorage
-function saveTransactionObj (transactionObj){
-    let transactionObjJSON = JSON.stringify(transactionObj);
-    localStorage.setItem("transactionData", transactionObjJSON);
-}
-
     formulario.addEventListener("submit", function(event){
     event.preventDefault();
     let formularioData = new FormData(formulario);
     let transactionObj = convertFormularioDataToTransactionObj (formularioData);
     saveTransactionObj (transactionObj);
 })
+
+    function saveTransactionObj (transactionObj){
+    let datosArray = JSON.parse(localStorage.getItem("transactionData")) || [];
+    datosArray.push(transactionObj);
+    let datosArrayJSON = JSON.stringify(datosArray); 
+    localStorage.setItem("transactionData", datosArrayJSON);
+
+//Implementación de guardado con fetch
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        },
+    body: JSON.stringify(transactionObj),
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+}
     document.addEventListener("DOMcontentLoaded", function(event){
         let transactionObjArray = JSON.parse(localStorage.getItem("transactionData"));
         transactionObjArray.forEach(
@@ -55,34 +69,38 @@ function saveTransactionObj (transactionObj){
     //fin localStorage
 //Fin Guardado y Obtención de Datos
 
-function mostrarError(){
-    alert("Los campos están incompletos!")
-
+//relleno y errores de los imputs
+function mostrarError(elemento){
+    elemento.preventDefault()
+    Swal.fire({
+        icon: 'error',
+        title: 'Completa este campo!'
+      })
 }
 function validarInformacion(elemento){
-    if(elemento.target.value.length > 0){ 
-        elemento.target.classList.remove("error-mostrar");
-        elemento.target.classList.add("correcto");
+     if(elemento.target.value.length > 0){ 
+        elemento.target.classList.remove("error-rojo");
+        elemento.target.classList.add("correcto-verde");
     }
     else{
-        elemento.target.classList.remove("correcto");
-        elemento.target.classList.add("error-mostrar"); 
-        mostrarError();
+        elemento.target.classList.remove("correcto-verde");
+        elemento.target.classList.add("error-rojo"); 
+        mostrarError(elemento);
     }
 
 }
 
 //Mostrar formulario enviado
-function enviarFormulario(elemento){
-    elemento.preventDefault()
- Swal.fire({
-    position: 'top-center',
-    icon: 'success',
-    title: 'Info enviada! Te respondemos por mail <3',
-    showConfirmButton: false,
-    timer: 1500
-  })
-}
+function enviarFormulario(elemento){ 
+    elemento.preventDefault() 
+        Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Info enviada! Te respondemos por mail <3',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
 
 
 
